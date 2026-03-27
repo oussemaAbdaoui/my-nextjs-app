@@ -14,11 +14,19 @@ import { ContactSection } from '@/components/sections/contact';
 export default function Home() {
   return (
     <div className="bg-slate-950 text-white min-h-screen overflow-x-hidden">
-      {/* Background dot grid */}
-      <div className="fixed inset-0 -z-10 pointer-events-none" style={{
-        backgroundImage: `radial-gradient(circle, rgba(37,99,235,0.08) 1px, transparent 1px)`,
-        backgroundSize: '32px 32px',
-      }} />
+      {/* Beautiful Animated Background */}
+      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-slate-950">
+        {/* Animated glowing orbs */}
+        <div className="absolute top-0 left-[10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-blob"></div>
+        <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-32 left-[30%] w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
+        
+        {/* Perspective grid overlay */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle, rgba(37,99,235,0.08) 1px, transparent 1px)`,
+          backgroundSize: '32px 32px',
+        }} />
+      </div>
 
       {/* Navigation */}
       <Navigation />
