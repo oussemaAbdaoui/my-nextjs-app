@@ -109,12 +109,12 @@ pipeline.add([
           transition={{ delay: 1.6, duration: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
-          <button className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold glow-blue transition-all">
+          <a href="#projects" className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold glow-blue transition-all inline-block">
             {heroData.cta.primary}
-          </button>
-          <button className="px-8 py-3 border border-blue-500/40 hover:border-blue-400 text-blue-300 rounded-lg font-semibold transition-all hover:bg-blue-500/10">
+          </a>
+          <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-blue-500/40 hover:border-blue-400 text-blue-300 rounded-lg font-semibold transition-all hover:bg-blue-500/10 inline-block">
             {heroData.cta.secondary}
-          </button>
+          </a>
         </motion.div>
 
         {/* Contact Icons */}
