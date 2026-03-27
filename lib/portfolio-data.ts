@@ -5,7 +5,7 @@ export const heroData = {
   cta: { primary: "View Projects", secondary: "Download CV" },
   contact: {
     email: "oussama5abdaoui@gmail.com",
-    linkedin: "https://linkedin.com/in/oussama-abdaoui",
+    linkedin: "https://www.linkedin.com/in/oussema-abdaoui-82a513293/",
     github: "https://github.com/oussemaAbdaoui",
     phone: "+216 53 334 828",
   },
@@ -215,7 +215,7 @@ export const extracurricularData = [
 export const contactData = {
   headline: "Let's build something serious.",
   email: "oussama5abdaoui@gmail.com",
-  linkedin: "https://linkedin.com/in/oussama-abdaoui",
+  linkedin: "https://www.linkedin.com/in/oussema-abdaoui-82a513293/",
   github: "https://github.com/oussemaAbdaoui",
   phone: "+216 53 334 828",
   location: "Ariana, Tunisia · Open to France + remote",
