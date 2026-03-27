@@ -15,15 +15,16 @@ export default function Home() {
   return (
     <div className="bg-slate-950 text-white min-h-screen overflow-x-hidden">
       {/* Beautiful Animated Background */}
-      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-slate-950">
-        {/* Animated glowing orbs */}
-        <div className="absolute top-0 left-[10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] animate-blob"></div>
-        <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-32 left-[30%] w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
+      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-slate-950 flex items-center justify-center">
+        {/* Deep, highly saturated, large shapes to ensure visibility */}
+        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-blob"></div>
+        <div className="absolute top-[10%] right-[-10%] w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-20 left-[20%] w-[500px] h-[500px] bg-indigo-500 rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-blob animation-delay-4000"></div>
         
-        {/* Perspective grid overlay */}
+        {/* Clear Perspective grid overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(37,99,235,0.2),rgba(15,23,42,1))]"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle, rgba(37,99,235,0.08) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)`,
           backgroundSize: '32px 32px',
         }} />
       </div>
