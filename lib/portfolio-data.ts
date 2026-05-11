@@ -12,10 +12,10 @@ export const heroData = {
 };
 
 export const aboutData = {
-  bio: "Final-year Software Engineering student at École Nationale d'Ingénieurs de Carthage (ENICarthage). Currently completing my end-of-studies internship at Zembra Tech, where I designed a production-grade Cloudflare bypass microservice adopted into the company's scraping infrastructure. Previously worked at Teratosoft deploying production LLM systems — Vision-Language models, RAG pipelines, and autonomous navigation agents. Passionate about building robust, production-ready systems that solve real-world engineering challenges.",
+  bio: "Final-year Software Engineering student at École Nationale d'Ingénieurs de Carthage (ENICarthage). Currently conducting research at LIPN (Sorbonne Paris Nord, CNRS UMR 7030) on Hybrid XAI-LLM frameworks that bridge the gap between formal AI explainability and user-friendly natural language. Previously completed backend engineering at Zembra Tech (Cloudflare bypass microservice) and AI deployment at Teratosoft (Vision-Language models, RAG pipelines, autonomous agents). Passionate about building robust systems that combine formal verification with human-centered AI.",
   stats: [
     { value: "3", label: "Years Engineering", icon: "GraduationCap" },
-    { value: "12+", label: "Projects Built", icon: "Code2" },
+    { value: "13+", label: "Projects Built", icon: "Code2" },
     { value: "5", label: "Certifications", icon: "Award" },
     { value: "3", label: "Languages Spoken", icon: "Globe" },
   ],
@@ -25,7 +25,7 @@ export const skillsData = [
   {
     category: "AI & Machine Learning",
     color: "amber",
-    skills: ["LLMs", "RAG", "LangChain", "LangGraph", "FAISS", "ChromaDB", "pgvector", "Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "LightGBM", "Agentic AI", "OCR", "NER", "DeepSpeed", "Groq API", "Optuna", "n8n", "Multimodal AI", "curl-cffi", "Playwright"],
+    skills: ["LLMs", "RAG", "LangChain", "LangGraph", "FAISS", "ChromaDB", "pgvector", "Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "LightGBM", "Agentic AI", "OCR", "NER", "DeepSpeed", "Groq API", "Optuna", "n8n", "Multimodal AI", "curl-cffi", "Playwright", "XAI", "SHAP", "LIME", "G-Eval"],
   },
   {
     category: "Languages",
@@ -53,6 +53,11 @@ export const skillsData = [
     skills: ["Docker", "Kubernetes", "GitHub Actions", "AWS Cloud Foundations", "Minikube", "Gunicorn", "Uvicorn", "Locust"],
   },
   {
+    category: "Formal Methods & Verification",
+    color: "indigo",
+    skills: ["Boolean Logic", "CNF Transformation", "Z3 Theorem Prover", "Formal Verification", "Semantic Equivalence", "Constraint Solving"],
+  },
+  {
     category: "Databases",
     color: "orange",
     skills: ["PostgreSQL", "MySQL", "MongoDB", "Oracle", "SQL Server", "FAISS", "ChromaDB", "pgvector"],
@@ -60,6 +65,21 @@ export const skillsData = [
 ];
 
 export const experienceData = [
+  {
+    role: "Research Engineer Intern — XAI-LLM Framework",
+    company: "LIPN, Sorbonne Paris Nord (CNRS UMR 7030)",
+    period: "May 2026 – Present",
+    location: "Paris, France",
+    current: true,
+    bullets: [
+      "Extending hybrid XAI-LLM framework published at HCII 2026, addressing the coherence-fidelity gap (83–100% qualitative vs 52–84% formal) in AI explanations",
+      "Designing stateful dialogue manager enabling follow-ups, counterfactuals, and clarifications while maintaining formal grounding in extracted model logic",
+      "Adapting pipeline for ensemble models (Random Forests, XGBoost, Gradient Boosting) with consensus logic extraction and weighted formal verification",
+      "Implementing retrieval-augmented generation for user-profile personalization (expert/professional/citizen) without compromising formal content, verified via semantic equivalence with Z3",
+      "Leveraging Boolean circuit / CNF transformation, ϵₕ,ₓ fidelity metrics, and G-Eval for semantic coherence validation",
+    ],
+    tags: ["Python", "LLM", "XAI", "SHAP", "LIME", "Z3", "RAG", "Boolean Logic", "CNF", "Formal Verification"],
+  },
   {
     role: "Backend Engineer — End-of-Studies (PFE)",
     company: "Zembra Tech",
@@ -119,6 +139,15 @@ export const experienceData = [
 
 export const projectsData = {
   featured: [
+    {
+      title: "Hybrid XAI-LLM Framework",
+      category: "AI · Formal Methods",
+      categoryColor: "indigo",
+      description: "Research framework bridging explainable AI and LLMs to translate XAI outputs (SHAP, LIME, Anchors) into accessible natural language while maintaining formal verifiability. Extends to ensemble models with dialogue manager and RAG-based personalization, grounded in Boolean circuits and Z3 constraint solving.",
+      metrics: ["Coherence-Fidelity gap addressed", "Ensemble model support", "Formal verification with Z3"],
+      tags: ["Python", "LLM", "XAI", "Z3", "RAG", "Boolean Logic", "G-Eval", "LIPN Research"],
+      highlight: true,
+    },
     {
       title: "Cloudflare Bypass Microservice",
       category: "Backend · Web Intelligence",
