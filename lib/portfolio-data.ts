@@ -12,10 +12,10 @@ export const heroData = {
 };
 
 export const aboutData = {
-  bio: "Final-year Software Engineering student at École Nationale d'Ingénieurs de Carthage (ENICarthage). Currently doing my end-of-studies internship at Zembra, building AI-driven solutions. Previously worked at Teratosoft deploying production LLM systems — Vision-Language models, RAG pipelines, and autonomous navigation agents. Passionate about the intersection of language models, embedded systems, and real-world engineering.",
+  bio: "Final-year Software Engineering student at École Nationale d'Ingénieurs de Carthage (ENICarthage). Currently completing my end-of-studies internship at Zembra Tech, where I designed a production-grade Cloudflare bypass microservice adopted into the company's scraping infrastructure. Previously worked at Teratosoft deploying production LLM systems — Vision-Language models, RAG pipelines, and autonomous navigation agents. Passionate about building robust, production-ready systems that solve real-world engineering challenges.",
   stats: [
     { value: "3", label: "Years Engineering", icon: "GraduationCap" },
-    { value: "11+", label: "Projects Built", icon: "Code2" },
+    { value: "12+", label: "Projects Built", icon: "Code2" },
     { value: "5", label: "Certifications", icon: "Award" },
     { value: "3", label: "Languages Spoken", icon: "Globe" },
   ],
@@ -25,7 +25,7 @@ export const skillsData = [
   {
     category: "AI & Machine Learning",
     color: "amber",
-    skills: ["LLMs", "RAG", "LangChain", "LangGraph", "FAISS", "ChromaDB", "pgvector", "Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "LightGBM", "Agentic AI", "OCR", "NER", "DeepSpeed", "Groq API", "Optuna", "n8n", "Multimodal AI"],
+    skills: ["LLMs", "RAG", "LangChain", "LangGraph", "FAISS", "ChromaDB", "pgvector", "Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "LightGBM", "Agentic AI", "OCR", "NER", "DeepSpeed", "Groq API", "Optuna", "n8n", "Multimodal AI", "curl-cffi", "Playwright"],
   },
   {
     category: "Languages",
@@ -50,7 +50,7 @@ export const skillsData = [
   {
     category: "DevOps & Cloud",
     color: "green",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "AWS Cloud Foundations", "Minikube"],
+    skills: ["Docker", "Kubernetes", "GitHub Actions", "AWS Cloud Foundations", "Minikube", "Gunicorn", "Uvicorn", "Locust"],
   },
   {
     category: "Databases",
@@ -61,17 +61,19 @@ export const skillsData = [
 
 export const experienceData = [
   {
-    role: "AI Intern — End-of-Studies (PFE)",
-    company: "Zembra",
-    period: "Feb 2026 – Present",
+    role: "Backend Engineer — End-of-Studies (PFE)",
+    company: "Zembra Tech",
+    period: "Feb 2026 – Apr 2026",
     location: "Ariana, Tunisia",
-    current: true,
+    current: false,
     bullets: [
-      "End-of-studies internship project on AI-driven industry solutions",
-      "Working on advanced NLP and LLM applications in production environment",
-      "Gaining hands-on experience deploying scalable AI systems",
+      "Designed and delivered a Cloudflare bypass microservice adopted into production scraping infrastructure, eliminating systematic IP blocks on high-value targets (Capterra, Glassdoor)",
+      "Engineered two-stage evasion engine: TLS ClientHello impersonation via curl-cffi/BoringSSL for fast requests, fallback to stealth headless Chromium (patchright) with automated Turnstile solving",
+      "Built persistent FingerprintVault (cookies, UA, localStorage) backed by Docker named volume, reducing repeat-request latency from ~10 min to 5–15 s (~40× improvement)",
+      "Implemented thread-safe ProxyRotator with pluggable strategy interface, DNS-over-HTTPS, and browser tab pooling via asyncio to prevent Chromium memory leaks",
+      "Conducted distributed load testing with Locust (5 workers, concurrent users) to validate session cache efficiency and worker stability under production load",
     ],
-    tags: ["AI", "LLMs", "Python"],
+    tags: ["Python", "FastAPI", "Gunicorn", "Playwright/patchright", "curl-cffi", "asyncio", "Docker", "Pydantic", "Locust"],
   },
   {
     role: "AI Software Developer (Part-time)",
@@ -117,6 +119,15 @@ export const experienceData = [
 
 export const projectsData = {
   featured: [
+    {
+      title: "Cloudflare Bypass Microservice",
+      category: "Backend · Web Intelligence",
+      categoryColor: "teal",
+      description: "Production-grade microservice that transparently bypasses Cloudflare bot detection using two-stage cascading fallback: TLS-spoofed HTTP via curl-cffi, falling back to stealth headless Chromium with automated Turnstile solving. Persists sessions in FingerprintVault for ~40× latency improvement.",
+      metrics: ["40× faster repeat requests", "All 4 Cloudflare challenge types", "Production adopted"],
+      tags: ["Python", "FastAPI", "curl-cffi", "patchright", "asyncio", "Docker", "Locust"],
+      highlight: true,
+    },
     {
       title: "Cognitive Navigation System",
       category: "AI · Robotics",
